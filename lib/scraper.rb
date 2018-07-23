@@ -13,8 +13,9 @@ class Scraper
       new_student[:name] =student_link_element.css("h4.student-name").text
       new_student[:profile_url] = student_link_element[0]['href']
       new_student[:location] =student_link_element.css("p.student-location").text
-      student_hash << new_student
+      student_array << new_student
     end
+    binding.pry
     student_hash
   end
 
