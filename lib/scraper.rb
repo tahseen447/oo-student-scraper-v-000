@@ -8,9 +8,9 @@ class Scraper
     students = doc.css(".student-card")
     binding.pry
     students.each do |student|
-      name =student.css('a')
+      name =student.css('a').css("h4.student-name").text
       url = student.css('a')[0]['href']
-      location =
+      location =student.css('a').css("p.student-location")
     end
   end
 
