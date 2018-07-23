@@ -15,6 +15,7 @@ class Scraper
       new_student[:location] =student_link_element.css("p.student-location")
       student_hash << new_student
     end
+    student_hash
   end
 
   def self.scrape_profile_page(profile_url)
