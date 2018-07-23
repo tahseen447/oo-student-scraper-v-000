@@ -9,7 +9,7 @@ class Scraper
     students.each do |student|
       student_link_element = student.css('a')
       name =student_link_element.css("h4.student-name").text
-      url = student.css('a')[0]['href']
+      url = student_link_element[0]['href']
       location =student.css('a').css("p.student-location")
     end
   end
