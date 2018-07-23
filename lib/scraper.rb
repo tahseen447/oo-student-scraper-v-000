@@ -15,7 +15,6 @@ class Scraper
       new_student[:location] =student_link_element.css("p.student-location")
       student_hash << new_student
     end
-    binding.pry
     student_hash
   end
 
